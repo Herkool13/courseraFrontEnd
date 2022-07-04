@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;600&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arima", cursive;
+}
+.nav {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.75em;
+}
+.container {
+    padding: 2rem;
+    padding-top: 1rem;
+}
+.card-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: start;
+    align-items: flex-start;
+}
+.card {
+    background-color: rgb(153, 153, 153);
+    border: 3px solid #333;
+    padding-left: 1rem;
+}
+.title {
+    float: right;
+    margin: 0;
+    border-left: 3px solid #333;
+    border-bottom: 3px solid #333;
+    padding: 0.1rem;
+    width: 150px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.75em;
+}
+.card-body {
+    padding-top: 2.5rem;
+    padding-right: 1rem;
+    font-size: 1.25em;
+}
+.card-body p {
+    line-height: 1.4rem;
+}
+.t1 {
+    background-color: #e5d198;
+}
+.t2 {
+    background-color: #c14543;
+    color: #fff;
+}
+.t3 {
+    background-color: #d59897;
+}
+/* ------responsive----- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card1 {
+        grid-area: card1;
+    }
+    .card2 {
+        grid-area: card2;
+    }
+    .card3 {
+        grid-area: card3;
+    }
+    .card-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3";
+    }
+}
+@media screen and (max-width: 767px) {
+    body{
+        font-size: 13px;
+    }
+    .card-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .title {
+        width: 40%;
+    }
+}
